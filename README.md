@@ -1,4 +1,4 @@
-[puppet-python](https://github.com/dmwilliamstech/puppet-gvm)
+[puppet-gvm](https://github.com/dmwilliamstech/puppet-gvm)
 ======
 
 Puppet module for installing gvm on centos hosts.
