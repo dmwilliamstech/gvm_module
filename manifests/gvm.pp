@@ -2,11 +2,11 @@
 class gvm::gvm {
 
         exec { "install-gvm":
-                command => "curl -s get.gvmtool.net | bash",
+                command => "sudo curl -s get.gvmtool.net | bash",
                 cwd => "/home/vagrant",
                 logoutput => true,
                 path => ["/usr/bin", "/usr/sbin", "/bin"],
-                require => [Package['curl'], Class['java']]
+                require => Package['curl']
         }->
 
 exec {'source_gvm_init':
