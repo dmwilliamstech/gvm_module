@@ -8,11 +8,11 @@ Puppet module for installing gvm on centos hosts.
 
 ``` bash
 cd /etc/puppet/modules
-git clone git://github.com/dmwilliamstech/puppet-gvm
+git clone git://github.com/dmwilliamstech/puppet-gvm gvm
 ```
 
 ## Usage
-include puppet-gvm
+include gvm
 (if you want groovy or grails installed include)
-puppet-gvm::grails
-puppet-gvm::groovy
+gvm::grails
+gvm::groovy
