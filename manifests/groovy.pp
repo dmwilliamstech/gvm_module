@@ -1,4 +1,4 @@
-lass gvm::groovy($version = '1.8.8'){
+class gvm::groovy($version = '1.8.8'){
     exec{'install-groovy':
         command=>'gvm install groovy -v $version',
         cwd=> "/home/vagrant",
