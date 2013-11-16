@@ -1,4 +1,7 @@
-class gvm::grails($version = '1.3.7'){
+include gvm
+
+class gvm::grails($version=undef){
+
 
     exec{'install-grails':
         command=>'gvm install grails -v $version',

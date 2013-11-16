@@ -1,4 +1,4 @@
-class gvm{
+class gvm($version=undef, $install_grails=false, $install_groovy=false){
 	package {'java-1.6.0-openjdk': 
 	ensure => installed 
 }->
@@ -34,4 +34,14 @@ exec {'/tmp/gvm_source.sh':
 exec {'source_bashrc': 
 	path=>['/bin/sh', '/bin/bash', '/usr/bin', '/bin', '/usr/sbin'], 
 	command=>'sudo bash -c /home/vagrant/.bashrc'}
+}
+if $install_grails{
+	class{
+		'gvm::grails': stage => 'grails-install', version => $version;
+	}
+}
+if $install_groovy{
+	class{
+'gvm::groovy' : stage => 'groovy-install', version => $version;
+	}
 }
